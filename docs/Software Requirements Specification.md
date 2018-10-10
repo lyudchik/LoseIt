@@ -16,11 +16,11 @@
 3. [System Requirements](#3.) <br>
   	3.1. [Functional Requirements](#3.1) <br>
   		3.1.1. [Basic functionality](#3.1.1) <br>
-  			3.1.1.1. [User logon to the application](#3.1.1.1)<br>
-  			3.1.1.2. [Access to medical data](#3.1.1.2)<br>
-  			3.1.1.3. [Adding medical information](#3.1.1.3)<br>
-  			3.1.1.4. [Deleting medical information](#3.1.1.4)<br>
-  			3.1.1.5. [Editing basic medical information](#3.1.1.5)<br>
+  			3.1.1.1. [Set calories restriction](#3.1.1.1)<br>
+  			3.1.1.2. [Pick date](#3.1.1.2)<br>
+  			3.1.1.3. [Search nutrients information](#3.1.1.3)<br>
+  			3.1.1.4. [Add food information](#3.1.1.4)<br>
+  			3.1.1.5. [Create food information](#3.1.1.5)<br>
   		3.1.2. [Limitations and Exceptions](#3.1.2)<br>
   	3.2. [Non-Functional Requierements](#3.2) <br>
    		3.2.1. [Software Quality Attributes](#3.2.1) <br>
@@ -111,35 +111,35 @@ People of all age categories who want to get in shape or lead a healthy lifestyl
  #### 3.1.1\. Basic functionality <a name="3.1.1"></a>
 
  ##### 3.1.1.1\. Set calories restriction <a name="3.1.1.1"></a>
-<b>Description: </b> The user has the opportunity to set amount of calories to reach goals.
+<b>Description: </b> The user has the ability to set amount of calories to reach goals.
 
 Function | Requirements
 |:---|:---
 Set calories restriction | The application should allow the user input correct amount of calories
 
  ##### 3.1.1.2\. Pick date <a name="3.1.1.2"></a>
-<b>Description: </b> The user has the opportunity to choose day and view previous results or set new goals.
+<b>Description: </b> The user has the ability to choose day and view previous results or set new goals.
 
 Function | Requirements
 |:---|:---
 Pick date | The application should allow the user to input correct date in format DD/MM/YYYY
 
  ##### 3.1.1.3\. Search nutrients information <a name="3.1.1.3"></a>
-<b>Description: </b> The user has the opportunity to search nutrients information about  food in the application.
+<b>Description: </b> The user has the ability to search nutrients information about food in the application.
 
 Function | Requirements
 |:---|:---
 Search nutrients information | The application should allow the user to search info and make a request to nutritionix via API
 
  ##### 3.1.1.4\. Add food information <a name="3.1.1.4"></a>
-<b>Description: </b> The user has the opportunity to add food for every meal in the application.
+<b>Description: </b> The user has the ability to add food for every meal in the application.
 
 Function | Requirements
 |:---|:---
 Add food information | The application should allow the user to add food for every meal in the application
 
  ##### 3.1.1.5\. Create food information <a name="3.1.1.5"></a>
-<b>Description: </b> The user has the opportunity to create basic food information.
+<b>Description: </b> The user has the ability to create basic food information.
 
 Function | Requirements
 |:---|:---
@@ -147,7 +147,7 @@ Create food information | The application should allow the user to create basic 
 
  #### 3.1.2\. Limitations and Exceptions <a name="3.1.2"></a>
 1. Application works without network connection with frequently used nutrients;
-2. Application can't scan barcodes without Internet connection.
+2. Application can't send requests without app ID and app key.
  ### 3.2\. Non-Functional Requierements <a name = "3.2"></a>
 #### 3.2.1\. Software Quality Attributes <a name = "3.2.1"></a>
 ##### 3.2.1.1 Usability <a name = "3.2.1.1"></a>
