@@ -48,6 +48,7 @@ Unlike various analogs,  data about frequently used nutrition will store in mobi
 	- Required Internet connection.  
   - <b>Lifesum by [Lifesum](https://lifesum.com/) </b><br>
 ![Lifesum](analogs/Lifesum.png)
+
  	With Lifesum, tracking your healthy habits (and the not so healthy ones) becomes a breeze. It will help you pick the right food, and eat the right portion sizes, to reach your personal health goals.
 	- Required authorization in the system;
 	- Animated interface with many tips; 
@@ -106,32 +107,44 @@ People of all age categories who want to get in shape or lead a healthy lifestyl
 3. The application will work without network connection with frequently used nutrients and all other functionality.
  ## 3\. System Requirements <a name="3"></a>
 ### 3.1\. Functional Requirements <a name="3.1"></a>
+
  #### 3.1.1\. Basic functionality <a name="3.1.1"></a>
+
  ##### 3.1.1.1\. Set calories restriction <a name="3.1.1.1"></a>
 <b>Description: </b> The user has the opportunity to set amount of calories to reach goals.
- Function | Requirements
-| :--- | :--- 
+
+Function | Requirements
+|:---|:---
 Set calories restriction | The application should allow the user input correct amount of calories
+
  ##### 3.1.1.2\. Pick date <a name="3.1.1.2"></a>
 <b>Description: </b> The user has the opportunity to choose day and view previous results or set new goals.
- Function | Requirements
-| :--- | :---
-Pick date | The application should allow the user to input correct date in format DD/MM/YYYY.
+
+Function | Requirements
+|:---|:---
+Pick date | The application should allow the user to input correct date in format DD/MM/YYYY
+
  ##### 3.1.1.3\. Search nutrients information <a name="3.1.1.3"></a>
 <b>Description: </b> The user has the opportunity to search nutrients information about  food in the application.
- Function | Requirements
-| :--- | :---
-Search nutrients information | The application should allow the user to search info and make a request to nutritionix via API. 
+
+Function | Requirements
+|:---|:---
+Search nutrients information | The application should allow the user to search info and make a request to nutritionix via API
+
  ##### 3.1.1.4\. Add food information <a name="3.1.1.4"></a>
 <b>Description: </b> The user has the opportunity to add food for every meal in the application.
- Function | Requirements
-| :--- | :---
-Add food information | The application should allow the user to add food for every meal in the application. 
+
+Function | Requirements
+|:---|:---
+Add food information | The application should allow the user to add food for every meal in the application
+
  ##### 3.1.1.5\. Create food information <a name="3.1.1.5"></a>
 <b>Description: </b> The user has the opportunity to create basic food information.
- Function | Requirements
-| :--- | :---
-Create food information | The application should allow the user to create basic food information.
+
+Function | Requirements
+|:---|:---
+Create food information | The application should allow the user to create basic food information
+
  #### 3.1.2\. Limitations and Exceptions <a name="3.1.2"></a>
 1. Application works without network connection with frequently used nutrients;
 2. Application can't scan barcodes without Internet connection.
