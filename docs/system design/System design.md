@@ -18,3 +18,11 @@
 6. [Component Diagram](#6)<br>
 7. [Deployment Diagram](#7)<br>
 
+##  1\. Activity Diagram <a name = "1"></a>
+Activity Diagram is represented [here](Activity%20diagram/Activity%20diagram.png)
+
+## 2\. Use case diagram <a name = "2"></a>
+Use case diagram is represented [here](Use%20Case/Use%20Case.png)
+### 2.1\. Actors <a name = "2.1"> </a>
+
+
