@@ -33,7 +33,7 @@ Use case diagram is represented [here](docs/system%20design/Use%20Case/Use%20Cas
 
 ### 2.2\. Use cases <a name = "2.2"> </a>
 #### 2.2.1\. Set calories restriction <a name = "2.2.1"> </a>
-**Description:** Use case "Set calories restriction" allows user to set daily calorie goal
+**Description:** Use case "Set calories restriction" allows user to set daily calorie goal<br>
 **Flow of events:**
 
 **Main thread:**
@@ -51,8 +51,8 @@ Use case diagram is represented [here](docs/system%20design/Use%20Case/Use%20Cas
 **Alternative thread A2:**
 1. Delete user's input data;
 2. Return to paragraph 5 of main thread. 
-#### 2.2.2\. Pick date <a name = "2.2.1"> </a>
-**Description:** Use case "Pick date" allows user to choose day from the calendar and works with information about nutrients.
+#### 2.2.2\. Pick date <a name = "2.2.2"> </a>
+**Description:** Use case "Pick date" allows user to choose day from the calendar and works with information about nutrients.<br>
 **Flow of events:**
 
 **Main thread:**
@@ -71,7 +71,7 @@ Use case diagram is represented [here](docs/system%20design/Use%20Case/Use%20Cas
 2. Return to paragraph 4 of main thread. 
 
 #### 2.2.3\. Search nutrients information <a name = "2.2.3"> </a>
-**Description:** Use case "Search nutrients information" allows user to search meal from nutrionix database or local database and works with information about nutrients.
+**Description:** Use case "Search nutrients information" allows user to search meal from nutrionix database or local database and works with information about nutrients.<br>
 **Flow of events:**
 
 **Main thread:**
@@ -93,7 +93,7 @@ Use case diagram is represented [here](docs/system%20design/Use%20Case/Use%20Cas
 3. Show matches at search page;
 4. Return to paragraph 5 of main thread.
 #### 2.2.4\.Add meal information <a name = "2.2.4"> </a>
-**Description:** Use case "Add meal information" allows user to add meal and edit data about nutrients.
+**Description:** Use case "Add meal information" allows user to add meal and edit data about nutrients.<br>
 **Flow of events:**
 
 **Main thread:**
@@ -119,8 +119,8 @@ Use case diagram is represented [here](docs/system%20design/Use%20Case/Use%20Cas
 1. Clear all user input data;
 2. Return to paragraph 3 of main thread. 
 #### 2.2.5\. Create meal information <a name = "2.2.5"> </a>
+**Description:** Use case "Create meal information" allows user to create meal information manually.<br>
 **Flow of events:**
-**Description:** Use case "Create meal information" allows user to create meal information manually.
 
 **Main thread:**
 1. User clicks "Add food" label at the main page;
@@ -142,9 +142,9 @@ Use case diagram is represented [here](docs/system%20design/Use%20Case/Use%20Cas
 1. Clear all user input data;
 2. Return to paragraph 4 of main thread. 
 #### 2.2.6\. Delete meal information <a name = "2.2.6"> </a>
+**Description:** Use case "Delete meal information" allows user to delete meal information.<br>
+**Precondition:** At least one dish at a given food intake exists.<br>
 **Flow of events:**
-**Description:** Use case "Delete meal information" allows user to delete meal information.
-**Precondition:** At least one dish at a given food intake exists.
 
 **Main thread:**
 1. User clicks "Meal" label in any food intake area at the main page;
