@@ -18,13 +18,11 @@
 6. [Component Diagram](#6)<br>
 7. [Deployment Diagram](#7)<br>
 
-<a name = "1">
-
 ##  1\. Activity Diagram <a name = "1"></a>
-Activity Diagram is represented [here](docs/system%20design/Activity%20diagram/Activity%20diagram.png)
+Activity Diagram is represented [here](Activity%20diagram/Activity.md)
 
 ## 2\. Use case diagram <a name = "2"></a>
-Use case diagram is represented [here](docs/system%20design/Use%20Case/Use%20Case.png)
+Use case diagram is represented [here](Use%20Case/Use%20Case.png)
 ### 2.1\. Actors <a name = "2.1"> </a>
 
 | Actor | Description|
@@ -156,3 +154,6 @@ Use case diagram is represented [here](docs/system%20design/Use%20Case/Use%20Cas
 **Alternative thread A14:**
 1. Delete meal information;
 2. Return to paragraph 4 of main thread.
+
+## 3\. Sequence diagram <a name = "2"></a>
+Sequence diagram is represented [here](Sequence%20diagram/Sequence.md)
