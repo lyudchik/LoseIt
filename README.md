@@ -9,6 +9,7 @@ Platform: Android OS 4.4+ <br>
  # Repository contents:
 1 [Documentation](docs) <br>
 1.1 [Requirements](docs/Software%20Requirements%20Specification.md) <br>
+1.2 [System design](docs/system%20design%20ystem%20design.md) <br>
 
 
 
