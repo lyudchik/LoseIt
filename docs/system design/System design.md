@@ -2,35 +2,32 @@
 
 #### [Glossary](Glossary.md)
 
-1. [Activity Diagram](#1)<br>
-2. [Use Case Diagram](#2)<br>
-2.1. [Actors](#2.1)<br>
-2.2. [Use Cases](#2.2)<br>
-2.2.1. [Set calories restriction](#2.2.1)<br>
-2.2.2. [Pick date](#2.2.2)<br>
-2.2.3. [Search nutrients information](#2.2.3)<br>
-2.2.4. [Add meal information](#2.2.4)<br>
-2.2.5. [Create meal information](#2.2.5)<br>
-2.2.6. [Delete meal information](#2.2.6)<br>
+1. [Use Case Diagram](#1)<br>
+1.1. [Actors](#1.1)<br>
+1.2. [Use Cases](#1.2)<br>
+1.2.1. [Set calories restriction](#1.2.1)<br>
+1.2.2. [Pick date](#1.2.2)<br>
+1.2.3. [Search nutrients information](#1.2.3)<br>
+1.2.4. [Add meal information](#1.2.4)<br>
+1.2.5. [Create meal information](#1.2.5)<br>
+1.2.6. [Delete meal information](#1.2.6)<br>
+2. [Activity Diagram](#2)<br>
 3. [Sequence Diagram](#3)<br>
 4. [State Diagram](#4)<br>
 5. [Class Diagram](#5)<br>
 6. [Component Diagram](#6)<br>
 7. [Deployment Diagram](#7)<br>
 
-##  1\. Activity Diagram <a name = "1"></a>
-Activity Diagram is represented [here](Activity%20diagram/Activity.md)
-
-## 2\. Use case diagram <a name = "2"></a>
+## 1\. Use case diagram <a name = "1"></a>
 Use case diagram is represented [here](Use%20Case/Use%20Case.png)
-### 2.1\. Actors <a name = "2.1"> </a>
+### 1.1\. Actors <a name = "1.1"> </a>
 
 | Actor | Description|
 |:--|:--|
 | User | Person who uses application
 
-### 2.2\. Use cases <a name = "2.2"> </a>
-#### 2.2.1\. Set calories restriction <a name = "2.2.1"> </a>
+### 1.2\. Use cases <a name = "1.2"> </a>
+#### 1.2.1\. Set calories restriction <a name = "1.2.1"> </a>
 **Description:** Use case "Set calories restriction" allows user to set daily calorie goal<br>
 **Flow of events:**
 
@@ -49,7 +46,7 @@ Use case diagram is represented [here](Use%20Case/Use%20Case.png)
 **Alternative thread A2:**
 1. Delete user's input data;
 2. Return to paragraph 5 of main thread. 
-#### 2.2.2\. Pick date <a name = "2.2.2"> </a>
+#### 1.2.2\. Pick date <a name = "1.2.2"> </a>
 **Description:** Use case "Pick date" allows user to choose day from the calendar and works with information about nutrients.<br>
 **Flow of events:**
 
@@ -68,7 +65,7 @@ Use case diagram is represented [here](Use%20Case/Use%20Case.png)
 1. Delete user's date choice and set old date;
 2. Return to paragraph 4 of main thread. 
 
-#### 2.2.3\. Search nutrients information <a name = "2.2.3"> </a>
+#### 1.2.3\. Search nutrients information <a name = "1.2.3"> </a>
 **Description:** Use case "Search nutrients information" allows user to search meal from nutrionix database or local database and works with information about nutrients.<br>
 **Flow of events:**
 
@@ -90,7 +87,7 @@ Use case diagram is represented [here](Use%20Case/Use%20Case.png)
 2. Search data in local database;
 3. Show matches at search page;
 4. Return to paragraph 5 of main thread.
-#### 2.2.4\.Add meal information <a name = "2.2.4"> </a>
+#### 1.2.4\.Add meal information <a name = "1.2.4"> </a>
 **Description:** Use case "Add meal information" allows user to add meal and edit data about nutrients.<br>
 **Flow of events:**
 
@@ -116,7 +113,7 @@ Use case diagram is represented [here](Use%20Case/Use%20Case.png)
 **Alternative thread A10:**
 1. Clear all user input data;
 2. Return to paragraph 3 of main thread. 
-#### 2.2.5\. Create meal information <a name = "2.2.5"> </a>
+#### 1.2.5\. Create meal information <a name = "1.2.5"> </a>
 **Description:** Use case "Create meal information" allows user to create meal information manually.<br>
 **Flow of events:**
 
@@ -139,7 +136,7 @@ Use case diagram is represented [here](Use%20Case/Use%20Case.png)
 **Alternative thread A13:**
 1. Clear all user input data;
 2. Return to paragraph 4 of main thread. 
-#### 2.2.6\. Delete meal information <a name = "2.2.6"> </a>
+#### 1.2.6\. Delete meal information <a name = "1.2.6"> </a>
 **Description:** Use case "Delete meal information" allows user to delete meal information.<br>
 **Precondition:** At least one dish at a given food intake exists.<br>
 **Flow of events:**
@@ -155,5 +152,8 @@ Use case diagram is represented [here](Use%20Case/Use%20Case.png)
 1. Delete meal information;
 2. Return to paragraph 4 of main thread.
 
-## 3\. Sequence diagram <a name = "2"></a>
+##  2\. Activity Diagram <a name = "2"></a>
+Activity Diagram is represented [here](Activity%20diagram/Activity.md)
+
+## 3\. Sequence diagram <a name = "3"></a>
 Sequence diagram is represented [here](Sequence%20diagram/Sequence.md)
