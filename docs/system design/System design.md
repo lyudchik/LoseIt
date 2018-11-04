@@ -153,7 +153,10 @@ Use case diagram is represented [here](Use%20Case/Use%20Case.png)
 2. Return to paragraph 4 of main thread.
 
 ##  2\. Activity Diagram <a name = "2"></a>
-Activity Diagram is represented [here](Activity%20diagram/Activity.md)
+Activity diagrams are represented [here](Activity%20diagram/Activity.md)
 
 ## 3\. Sequence diagram <a name = "3"></a>
-Sequence diagram is represented [here](Sequence%20diagram/Sequence.md)
+Sequence diagrams are represented [here](Sequence%20diagram/Sequence.md)
+
+## 4\. State diagram <a name = "4"></a>
+State diagrams are represented [here](State%20diagram/State.md)
