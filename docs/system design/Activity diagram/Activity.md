@@ -5,7 +5,7 @@
 2. [Pick date](#date)
 3. [Add meal information](#add)
 4. [Create meal information](#create)
-5. [Delete add information](#delete)
+5. [Delete meal information](#delete)
 6. [Search nutrients information](#search)
 
 ## 1. Set calorie restriction <a name = calorie> </a>
@@ -17,6 +17,6 @@
 ## 4. Create meal information <a name = create> </a>
 ![Create meal information](https://github.com/VladislavLiudchyk/LoseIt/blob/master/docs/system%20design/Activity%20diagram/Create%20meal%20information.png)
 ## 5. Delete add information <a name = delete> </a>
-![Delete add information](https://github.com/VladislavLiudchyk/LoseIt/blob/master/docs/system%20design/Activity%20diagram/Delete%20meal%20information.png)
+![Delete meal information](https://github.com/VladislavLiudchyk/LoseIt/blob/master/docs/system%20design/Activity%20diagram/Delete%20meal%20information.png)
 ## 6. Search nutrients information <a name = search> </a>
 ![Search nutrients information](https://github.com/VladislavLiudchyk/LoseIt/blob/master/docs/system%20design/Activity%20diagram/Search%20nutrients%20information.png)
