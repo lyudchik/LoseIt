@@ -15,8 +15,7 @@
 3. [Sequence Diagram](#3)<br>
 4. [State Diagram](#4)<br>
 5. [Class Diagram](#5)<br>
-6. [Component Diagram](#6)<br>
-7. [Deployment Diagram](#7)<br>
+6. [Component/Deployment Diagram](#6)<br>
 
 ## 1\. Use case diagram <a name = "1"></a>
 Use case diagram is represented [here](Use%20Case/Use%20Case.png)
@@ -160,3 +159,9 @@ Sequence diagrams are represented [here](Sequence%20diagram/Sequence.md)
 
 ## 4\. State diagram <a name = "4"></a>
 State diagrams are represented [here](State%20diagram/State.md)
+
+## 5\. Class diagram <a name = "5"></a>
+State diagrams are represented [here](Class%20diagram/Class.md)
+
+## 6\. Component/Deployment diagram <a name = "6"></a>
+State diagrams are represented [here](Component%20diagram/Component.md)
