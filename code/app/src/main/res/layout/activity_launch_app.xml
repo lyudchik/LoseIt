@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LaunchAppActivity"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/splash_margin"
+        android:layout_marginStart="@dimen/splash_margin"
+        android:layout_marginTop="@dimen/splash_margin_top"
+        android:scaleX="@dimen/splash_image_scale"
+        android:scaleY="@dimen/splash_image_scale"
+        android:src="@mipmap/my_ic_launcher"
+        android:layout_above="@id/textView"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/splash_margin"
+        android:layout_marginStart="@dimen/splash_margin"
+        android:layout_marginTop="@dimen/splash_margin"
+        android:text="@string/app_name"
+        android:textColor="@color/colorLightText"
+        android:textSize="@dimen/splash_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
