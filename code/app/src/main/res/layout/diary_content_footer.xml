@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhitesmoke">
+
+    <TextView
+        android:id="@+id/diary_add_button"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/diary_add"
+        android:background="@color/colorGreen"
+        android:drawablePadding="@dimen/small_padding"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/small_padding"
+        android:paddingBottom="@dimen/small_padding"
+        android:paddingLeft="@dimen/large_padding"
+        android:drawableStart="@drawable/ic_add_24dp"
+        android:drawableLeft="@drawable/ic_add_24dp"
+        android:layout_marginBottom="@dimen/large_padding"/>
+
+</RelativeLayout>
