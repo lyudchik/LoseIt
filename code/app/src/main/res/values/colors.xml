@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBurgundy">#840d0d</color>
+    <color name="colorLightText">@color/colorWhite</color>
+    <color name="colorBorderLine">@color/colorWhitesmoke</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGreen">#00ff00</color>
+    <color name="colorWhitesmoke">#f5f5f5</color>
+
+</resources>
