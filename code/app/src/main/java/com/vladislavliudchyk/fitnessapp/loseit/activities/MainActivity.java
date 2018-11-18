@@ -1,14 +1,11 @@
-package com.vladislavliudchyk.fitnessapp.loseit;
+package com.vladislavliudchyk.fitnessapp.loseit.activities;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.DatePicker;
@@ -16,10 +13,10 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Calendar;
+import com.vladislavliudchyk.fitnessapp.loseit.R;
+import com.vladislavliudchyk.fitnessapp.loseit.utils.PickDate;
+
 import java.util.Date;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 

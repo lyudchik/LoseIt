@@ -1,4 +1,4 @@
-package com.vladislavliudchyk.fitnessapp.loseit;
+package com.vladislavliudchyk.fitnessapp.loseit.utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;
