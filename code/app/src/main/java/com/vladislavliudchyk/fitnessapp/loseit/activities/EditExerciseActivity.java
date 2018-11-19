@@ -23,7 +23,7 @@ public class EditExerciseActivity extends AppCompatActivity {
     public static final int DELETE_RESULT_OK = 200;
 
     /**
-     *
+     * Set all content including toolbar, buttons and text fields
      * {@inheritDoc}
      */
     @Override
@@ -82,6 +82,9 @@ public class EditExerciseActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Show error dialog when user doesn't follow certain instructions
+     */
     private void showErrorDialog() {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle(getString(R.string.general_alert));
@@ -89,7 +92,10 @@ public class EditExerciseActivity extends AppCompatActivity {
         alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, getString(R.string.dismiss), (DialogInterface.OnClickListener) null);
         alertDialog.show();
     }
-
+    /**
+     * Show alert dialog when user clicked delete button
+     * @param position the value of meal position
+     */
     private void showDeleteAlertDialog(final int position){
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle(getString(R.string.general_alert));
