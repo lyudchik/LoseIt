@@ -1,12 +1,13 @@
 package com.vladislavliudchyk.fitnessapp.loseit.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Class that describes the whole diet day
  */
-public class DailyDiet {
+public class DailyDiet implements Serializable {
     /**
      * Value of the calendar date
      */

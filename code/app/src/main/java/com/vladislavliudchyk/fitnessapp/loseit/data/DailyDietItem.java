@@ -1,10 +1,12 @@
 package com.vladislavliudchyk.fitnessapp.loseit.data;
 
 
+import java.io.Serializable;
+
 /**
  * Class that describes one unit of daily nutrition
  */
-public class DailyDietItem {
+public class DailyDietItem implements Serializable {
 
     /**
      * Value of the dish title

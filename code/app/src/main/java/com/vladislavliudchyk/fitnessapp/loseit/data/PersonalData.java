@@ -1,12 +1,13 @@
 package com.vladislavliudchyk.fitnessapp.loseit.data;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * Class that describes all personal user's data
  */
-public class PersonalData {
+public class PersonalData implements Serializable {
     /**
      * Value of the calorie restriction
      */
