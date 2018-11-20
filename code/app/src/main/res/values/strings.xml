@@ -35,7 +35,7 @@
     <string name="diary_create_food">Create Meal</string>
     <string name="diary_content_title">Nutrient Description</string>
     <string name="add_food_unit_name_example">Required (e.g. piece, pound)</string>
-    <string name="add_food_title_example_required">Required (e.g. Big Mac, banana)</string>
+    <string name="add_food_title_example_required">Required (e.g. Grey Goose, banana)</string>
     <string name="add_food_amount_example">Required</string>
     <string name="add_food_calory_per_unit_example">Required</string>
     <string name="diary_content_amount">Number of Servings</string>
