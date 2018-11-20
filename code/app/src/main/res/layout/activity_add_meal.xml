@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/large_padding"
-        android:maxLength="15"
+        android:maxLength="40"
         android:hint="@string/add_food_title_example_required" />
     <TextView
         android:id="@+id/diary_content_unit_name"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/large_padding"
         android:maxLines="1"
-        android:maxLength="10"
+        android:maxLength="30"
         android:hint="@string/add_food_unit_name_example"
         android:inputType=""/>
     <TextView
