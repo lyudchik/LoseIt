@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import com.vladislavliudchyk.fitnessapp.loseit.R;
 import com.vladislavliudchyk.fitnessapp.loseit.activities.AddMealActivity;
-import com.vladislavliudchyk.fitnessapp.loseit.activities.SearchMealActivity;
+import com.vladislavliudchyk.fitnessapp.loseit.activities.SearchNutrientsActivity;
 import com.vladislavliudchyk.fitnessapp.loseit.data.DailyDietItem;
 
 import java.util.List;
 
-import static com.vladislavliudchyk.fitnessapp.loseit.activities.SearchMealActivity.CREATE_FOOD_IN_SEARCH;
+import static com.vladislavliudchyk.fitnessapp.loseit.activities.SearchNutrientsActivity.CREATE_FOOD_IN_SEARCH;
 
 /**
  * Class that displays meals, founded via Nutritionix API as a list of elements using Base adapter
@@ -83,7 +83,7 @@ public class ListSearchMealAdapter extends BaseAdapter {
             public void onClick(View view) {
                 Intent intent = new Intent(context, AddMealActivity.class);
                 intent.putExtra("Food", foodList.get(i));
-                ((SearchMealActivity)context).startActivityForResult(intent, CREATE_FOOD_IN_SEARCH);
+                ((SearchNutrientsActivity)context).startActivityForResult(intent, CREATE_FOOD_IN_SEARCH);
             }
         });
         return view;
