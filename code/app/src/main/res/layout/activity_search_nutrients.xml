@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="activities.MainActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_search_meal"
+        style="@style/MyToolbar">
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search_meal_search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:iconifiedByDefault="false"
+            app:defaultQueryHint="@string/add_food_title_example"
+            android:background="@drawable/rounded_corner_background"
+            android:layout_marginRight="@dimen/small_padding">
+
+        </android.support.v7.widget.SearchView>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/search_food_result_from_internet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</LinearLayout>
