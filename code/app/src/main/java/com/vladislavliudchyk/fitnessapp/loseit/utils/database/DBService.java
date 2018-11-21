@@ -70,25 +70,6 @@ public class DBService extends SQLiteOpenHelper {
     }
 
     /**
-     * This method inserts value to the database
-     * @param title value of the table column title
-     * @param calPerUnit value of the table column calorie per unit
-     * @param unitNumber value of the table column unit number
-     * @param unitName value of the column unitName
-     * @return boolean value depends on success of operation
-     */
-    public boolean insertMeal(String title, String calPerUnit, String unitNumber, String unitName) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(AppData.DietInfoTable.COLUMN_TITLE, title);
-        contentValues.put(AppData.DietInfoTable.COLUMN_CALORIE_PER_UNIT, calPerUnit);
-        contentValues.put(AppData.DietInfoTable.COLUMN_UNIT_NUMBER, unitNumber);
-        contentValues.put(AppData.DietInfoTable.COLUMN_UNIT_NAME, unitName);
-        db.insert(AppData.DietInfoTable.TABLE_NAME, null, contentValues);
-        return true;
-    }
-
-    /**
      * This method save all elements to the local database
      * @param listMeal value of the list of elements
      */
@@ -106,8 +87,26 @@ public class DBService extends SQLiteOpenHelper {
     }
 
     /**
+     * This method save one element to the local database
+     * @param title value of the meal title
+     * @param caloriePerUnit value of the meal calories per unit
+     * @param unitNumber value of the meal number of servings
+     * @param unitName value of the meal serving size
+     */
+    public void insertElement(String title, int caloriePerUnit, double unitNumber, String unitName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(AppData.DietInfoTable.COLUMN_TITLE, title);
+        contentValues.put(AppData.DietInfoTable.COLUMN_CALORIE_PER_UNIT, caloriePerUnit);
+        contentValues.put(AppData.DietInfoTable.COLUMN_UNIT_NUMBER, unitNumber);
+        contentValues.put(AppData.DietInfoTable.COLUMN_UNIT_NAME, unitName);
+        db.insert(AppData.DietInfoTable.TABLE_NAME, null, contentValues);
+        contentValues.clear();
+    }
+
+    /**
      * Read from database all information
-     * @return
+     * @return new value of the meals that were retrieved from database
      */
     public ArrayList<DailyDietItem> getAllMeals() {
         ArrayList<DailyDietItem> mealList = new ArrayList<>();
@@ -127,6 +126,85 @@ public class DBService extends SQLiteOpenHelper {
         }
         res.close();
         return mealList;
+    }
+
+    /**
+     * This method search for information about nutriniton in local database
+     * @param searchTitle Value of the title to search
+     * @return new value of the meals that were retrieved from database
+     */
+    public ArrayList<DailyDietItem> searchMeals(String searchTitle) {
+        ArrayList<DailyDietItem> mealList = new ArrayList<>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM nutrition WHERE title LIKE '%" + searchTitle + "%'", null);
+        res.moveToFirst();
+
+        while (!res.isAfterLast()) {
+            mealList.add(new DailyDietItem(
+                    res.getString(1),
+                    Integer.parseInt(res.getString(2)),
+                    Double.parseDouble(res.getString(3)),
+                    res.getString(4)
+            ));
+            res.moveToNext();
+        }
+        res.close();
+        return mealList;
+    }
+
+    public int getElementID(String title) {
+        Integer result;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT _id FROM nutrition WHERE title = '%" + title + "%'", null);
+        res.moveToFirst();
+        result = res.getInt(0);
+        res.close();
+        return result;
+    }
+
+    /**
+     * Read from database all information
+     * @return new value of the meals that were retrieved from database
+     */
+    public ArrayList<DailyDietItem> getDistinctMeals() {
+        ArrayList<DailyDietItem> mealList = new ArrayList<>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select distinct * from nutrition", null);
+        res.moveToFirst();
+
+        while (!res.isAfterLast()) {
+            mealList.add(new DailyDietItem(
+                    res.getString(1),
+                    Integer.parseInt(res.getString(2)),
+                    Double.parseDouble(res.getString(3)),
+                    res.getString(4)
+            ));
+            res.moveToNext();
+        }
+        res.close();
+        return mealList;
+    }
+
+    public void optimizeDB() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        List<DailyDietItem> list = getDistinctMeals();
+        db.execSQL("DROP TABLE IF EXISTS " + AppData.DietInfoTable.TABLE_NAME);
+        onCreate(db);
+        insertAll(list);
+    }
+
+    public void deleteElement(DailyDietItem toDelete) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String title = toDelete.getTitle();
+        Integer calPerUnit = toDelete.getCaloriePerUnit();
+        Double unitNumber = toDelete.getUnitNumber();
+        String unitName = toDelete.getUnitName();
+        String DELETE_ELEMENT = "DELETE FROM " + AppData.DietInfoTable.TABLE_NAME
+                + " WHERE title = " + title + " AND caloriePerUnit = " + calPerUnit
+                + " AND unitNumber = " + unitNumber + " AND unitName = " + unitName;
+        db.execSQL(DELETE_ELEMENT);
     }
 
 }

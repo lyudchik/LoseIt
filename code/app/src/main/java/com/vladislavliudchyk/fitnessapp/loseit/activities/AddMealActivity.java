@@ -12,12 +12,14 @@ import android.widget.EditText;
 
 import com.vladislavliudchyk.fitnessapp.loseit.R;
 import com.vladislavliudchyk.fitnessapp.loseit.data.DailyDietItem;
+import com.vladislavliudchyk.fitnessapp.loseit.utils.database.DBService;
 
 /**
  * Class that allows to user to add nutrients information
  */
 public class AddMealActivity extends AppCompatActivity {
 
+    private DBService dbService;
     /**
      * Set all content including toolbar, buttons and text fields
      * {@inheritDoc}
@@ -26,6 +28,7 @@ public class AddMealActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_meal);
+        dbService = new DBService(this);
 
         // process data passed in
         DailyDietItem food = (DailyDietItem) getIntent().getSerializableExtra("Food");
@@ -62,6 +65,8 @@ public class AddMealActivity extends AppCompatActivity {
                     DailyDietItem food = new DailyDietItem(titleText, caloryPerUnit, unitNumber, unitNameText);
                     Intent intent = new Intent();
                     intent.putExtra("Food", food);
+                    dbService.insertElement(food.getTitle(), food.getCaloriePerUnit(),
+                            food.getUnitNumber(), food.getUnitName());
                     setResult(RESULT_OK, intent);
                     finish();
                 }

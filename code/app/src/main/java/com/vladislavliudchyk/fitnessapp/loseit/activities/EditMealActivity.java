@@ -13,6 +13,7 @@ import android.widget.EditText;
 import com.vladislavliudchyk.fitnessapp.loseit.R;
 import com.vladislavliudchyk.fitnessapp.loseit.data.DailyDiet;
 import com.vladislavliudchyk.fitnessapp.loseit.data.DailyDietItem;
+import com.vladislavliudchyk.fitnessapp.loseit.utils.database.DBService;
 
 /**
  * Class that allows to user to edit nutrients information
@@ -28,6 +29,8 @@ public class EditMealActivity extends AppCompatActivity {
      */
     public static final int DELETE_RESULT_OK = 200;
 
+    private DBService dbService;
+
     /**
      * Set all content including toolbar, buttons and text fields
      * {@inheritDoc}
@@ -36,6 +39,7 @@ public class EditMealActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_meal);
+        dbService = new DBService(this);
 
         // process data passed in
         DailyDietItem food = (DailyDietItem) getIntent().getSerializableExtra("Food");
@@ -62,15 +66,24 @@ public class EditMealActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 Intent intent;
+
                 switch (item.getItemId()){
                     case R.id.toolbar_edit_delete:
-                        showDeleteAlertDialog(position);
-                        break;
-                    case R.id.toolbar_edit_done:
                         String titleText = ((EditText) findViewById(R.id.diary_content_edit_title_edit)).getText().toString();
                         String calPerUnitText = ((EditText) findViewById(R.id.diary_content_edit_calory_per_unit_edit)).getText().toString();
                         String amountText = ((EditText) findViewById(R.id.diary_content_edit_amount_edit)).getText().toString();
                         String unitNameText = ((EditText) findViewById(R.id.diary_content_edit_unit_name_edit)).getText().toString();
+                        DailyDietItem toDelete = new DailyDietItem(titleText,
+                                Integer.parseInt(calPerUnitText),
+                                Double.parseDouble(amountText), unitNameText);
+                        //dbService.deleteElement(toDelete);
+                        showDeleteAlertDialog(position);
+                        break;
+                    case R.id.toolbar_edit_done:
+                        titleText = ((EditText) findViewById(R.id.diary_content_edit_title_edit)).getText().toString();
+                        calPerUnitText = ((EditText) findViewById(R.id.diary_content_edit_calory_per_unit_edit)).getText().toString();
+                        amountText = ((EditText) findViewById(R.id.diary_content_edit_amount_edit)).getText().toString();
+                        unitNameText = ((EditText) findViewById(R.id.diary_content_edit_unit_name_edit)).getText().toString();
                         if (titleText.equals("") || calPerUnitText.equals("") || amountText.equals("") || unitNameText.equals("")) {
                             showErrorDialog();
                         } else {

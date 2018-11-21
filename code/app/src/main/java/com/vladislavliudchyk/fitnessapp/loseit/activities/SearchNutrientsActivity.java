@@ -67,6 +67,11 @@ public class SearchNutrientsActivity extends AppCompatActivity {
     String currentDateString;
 
     /**
+     * Value of the similar title
+     */
+    String similarTitle;
+
+    /**
      * This method sets all content to the certain app screen
      * {@inheritDoc}
      */
@@ -191,6 +196,7 @@ public class SearchNutrientsActivity extends AppCompatActivity {
          */
         @Override
         protected List<DailyDietItem> doInBackground(String... strings) {
+            similarTitle = strings[0];
             String appId = "e1265399";
             String appKey = "91f3c74aa5fa6a416df6ff89431a3f5e";
             String initialPart = "https://api.nutritionix.com/v1_1/search/";
@@ -225,11 +231,6 @@ public class SearchNutrientsActivity extends AppCompatActivity {
                         foodList.add(new DailyDietItem(item.item_name + ", " + item.brand_name,
                                 (int) item.nf_calories, item.nf_serving_size_qty,
                                 item.nf_serving_size_unit));
-
-                       dbService.insertMeal(item.item_name + ", " + item.brand_name,
-                                    Double.toString(item.nf_calories),
-                                    Double.toString(item.nf_serving_size_qty),
-                                    item.nf_serving_size_unit);
                     }
                     return foodList;
 
@@ -255,7 +256,11 @@ public class SearchNutrientsActivity extends AppCompatActivity {
          */
         @Override
         protected void onPostExecute(List<DailyDietItem> foods) {
-            super.onPostExecute(foods);
+            if(!foods.isEmpty())
+                super.onPostExecute(foods);
+            else
+                super.onPostExecute(dbService.getAllMeals());
+            dbService.insertAll(foods);
             LinearLayout linearLayout = findViewById(R.id.search_food_result_from_internet);
             linearLayout.removeAllViews();
             // hide keyboard
@@ -264,10 +269,18 @@ public class SearchNutrientsActivity extends AppCompatActivity {
 
             View createFoodButton;
 
+            //TODO - change controller
+//            if (foods.isEmpty()) {
+//                linearLayout.addView(getLayoutInflater().inflate(R.layout.error_no_results, null));
+//                createFoodButton = getLayoutInflater().inflate(R.layout.create_meal_button, null);
+//                linearLayout.addView(createFoodButton);
             if (foods.isEmpty()) {
-                linearLayout.addView(getLayoutInflater().inflate(R.layout.error_no_results, null));
+                linearLayout.addView(getLayoutInflater().inflate(R.layout.nutrients_result, null));
+                ListView listView = findViewById(R.id.search_meal_result_list);
+                listView.setAdapter(new ListSearchMealAdapter(dbService.searchMeals(similarTitle), SearchNutrientsActivity.this));
                 createFoodButton = getLayoutInflater().inflate(R.layout.create_meal_button, null);
-                linearLayout.addView(createFoodButton);
+                listView.addFooterView(createFoodButton);
+                listView.setDivider(null);
             } else {
                 linearLayout.addView(getLayoutInflater().inflate(R.layout.nutrients_result, null));
                 ListView listView = findViewById(R.id.search_meal_result_list);
