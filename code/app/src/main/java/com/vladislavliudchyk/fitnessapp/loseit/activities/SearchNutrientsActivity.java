@@ -53,8 +53,10 @@ public class SearchNutrientsActivity extends AppCompatActivity {
      * Value of the connect error constant
      */
     private static final int CONNECT_ERROR = -1;
-
-    //TODO - add description
+    /**
+     * Value of the object which provides
+     * access to local database
+     */
     private DBService dbService;
 
     /**
@@ -269,11 +271,6 @@ public class SearchNutrientsActivity extends AppCompatActivity {
 
             View createFoodButton;
 
-            //TODO - change controller
-//            if (foods.isEmpty()) {
-//                linearLayout.addView(getLayoutInflater().inflate(R.layout.error_no_results, null));
-//                createFoodButton = getLayoutInflater().inflate(R.layout.create_meal_button, null);
-//                linearLayout.addView(createFoodButton);
             if (foods.isEmpty()) {
                 linearLayout.addView(getLayoutInflater().inflate(R.layout.nutrients_result, null));
                 ListView listView = findViewById(R.id.search_meal_result_list);
