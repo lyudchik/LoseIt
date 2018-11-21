@@ -12,8 +12,17 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+/**
+ * Class that provides read/write operations
+ * with user data and allows to store them in file
+ */
 public class StorageService {
 
+    /**
+     * This method write data to storage
+     * @param context Context of the application
+     * @param personalData Value of the personal data
+     */
     public static void writeToStorage(Context context, PersonalData personalData) {
         FileOutputStream fileOutputStream;
         try {
@@ -28,6 +37,11 @@ public class StorageService {
         }
     }
 
+    /**
+     * This method read data from storage
+     * @param context Context of the application
+     * @return Value of the personal data
+     */
     public static PersonalData loadFromStorage(Context context) {
 
         File file = context.getFileStreamPath("userdata");

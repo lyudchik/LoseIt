@@ -28,7 +28,10 @@ public class EditMealActivity extends AppCompatActivity {
      * The value of success delete operation
      */
     public static final int DELETE_RESULT_OK = 200;
-
+    /**
+     * Value of the object which provides
+     * access to local database
+     */
     private DBService dbService;
 
     /**

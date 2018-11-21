@@ -331,7 +331,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method
+     * This method returns personal data
      * @return value of the user's personal data
      */
     public static PersonalData getPersonalData() {

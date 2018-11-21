@@ -187,6 +187,9 @@ public class DBService extends SQLiteOpenHelper {
         return mealList;
     }
 
+    /**
+     * This method deletes from database equal rows
+     */
     public void optimizeDB() {
         SQLiteDatabase db = this.getReadableDatabase();
         List<DailyDietItem> list = getDistinctMeals();
@@ -195,6 +198,10 @@ public class DBService extends SQLiteOpenHelper {
         insertAll(list);
     }
 
+    /**
+     * This method deletes one element from database
+     * @param toDelete Value of the object to delete
+     */
     public void deleteElement(DailyDietItem toDelete) {
         SQLiteDatabase db = this.getReadableDatabase();
         String title = toDelete.getTitle();
