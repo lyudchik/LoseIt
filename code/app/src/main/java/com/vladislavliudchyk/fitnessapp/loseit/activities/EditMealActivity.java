@@ -28,11 +28,6 @@ public class EditMealActivity extends AppCompatActivity {
      * The value of success delete operation
      */
     public static final int DELETE_RESULT_OK = 200;
-    /**
-     * Value of the object which provides
-     * access to local database
-     */
-    private DBService dbService;
 
     /**
      * Set all content including toolbar, buttons and text fields
@@ -42,7 +37,7 @@ public class EditMealActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_meal);
-        dbService = new DBService(this);
+        DBService dbService = new DBService(this);
 
         // process data passed in
         DailyDietItem food = (DailyDietItem) getIntent().getSerializableExtra("Food");

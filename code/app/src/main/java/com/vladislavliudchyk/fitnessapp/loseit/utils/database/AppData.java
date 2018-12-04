@@ -11,7 +11,7 @@ public class AppData {
      */
     private AppData() {
 
-    };
+    }
 
     /**
      * Class that describes tables in databases

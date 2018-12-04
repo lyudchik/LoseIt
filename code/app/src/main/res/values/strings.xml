@@ -54,4 +54,7 @@
     <string name="set_goal_hint">Set your daily calorie goal:</string>
     <string name="dialog_positive_button_ok">OK</string>
     <string name="item_required">Required</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="equal">=</string>
 </resources>

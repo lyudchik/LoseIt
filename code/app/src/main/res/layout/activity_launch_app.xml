@@ -18,7 +18,8 @@
         android:scaleY="@dimen/splash_image_scale"
         android:src="@mipmap/my_ic_launcher"
         android:layout_above="@id/textView"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name" />
 
     <TextView
         android:id="@+id/textView"

@@ -1,7 +1,10 @@
 package com.vladislavliudchyk.fitnessapp.loseit.utils;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +13,10 @@ import android.widget.TextView;
 
 import com.vladislavliudchyk.fitnessapp.loseit.R;
 import com.vladislavliudchyk.fitnessapp.loseit.activities.AddMealActivity;
+import com.vladislavliudchyk.fitnessapp.loseit.activities.EditMealActivity;
+import com.vladislavliudchyk.fitnessapp.loseit.activities.MainActivity;
 import com.vladislavliudchyk.fitnessapp.loseit.activities.SearchNutrientsActivity;
+import com.vladislavliudchyk.fitnessapp.loseit.data.DailyDiet;
 import com.vladislavliudchyk.fitnessapp.loseit.data.DailyDietItem;
 
 import java.util.List;
@@ -85,7 +91,27 @@ public class ListSearchMealAdapter extends BaseAdapter {
                 intent.putExtra("Food", foodList.get(i));
                 ((SearchNutrientsActivity)context).startActivityForResult(intent, CREATE_FOOD_IN_SEARCH);
             }
+
+        });
+        view.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+                alertDialog.setTitle(context.getResources().getString(R.string.general_alert));
+                alertDialog.setMessage(context.getResources().getString(R.string.delete_item_alert));
+                alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, context.getResources().getString(R.string.cancel), (DialogInterface.OnClickListener) null);
+                alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, context.getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                alertDialog.show();
+                return false;
+            }
         });
         return view;
     }
+
+
 }

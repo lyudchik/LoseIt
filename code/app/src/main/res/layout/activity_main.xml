@@ -29,21 +29,21 @@
                 tools:text="2000"
                 android:gravity="center" />
             <TextView
-                android:text="-"
+                android:text="@string/minus"
                 android:gravity="center"/>
             <TextView
                 android:id="@+id/food_number"
                 tools:text="800"
                 android:gravity="center"/>
             <TextView
-                android:text="+"
+                android:text="@string/plus"
                 android:gravity="center"/>
             <TextView
                 android:id="@+id/exercise_number"
                 tools:text="500"
                 android:gravity="center"/>
             <TextView
-                android:text="="
+                android:text="@string/equal"
                 android:gravity="center"/>
             <TextView
                 android:id="@+id/remaining_number"

@@ -25,7 +25,7 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ViewHo
 
     /**
      * public constructor
-     * @param itemList
+     * @param itemList Value of the with with items
      */
     public ListItemAdapter(List<DailyDietItem> itemList) {
         this.itemList = itemList;
@@ -52,9 +52,8 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ViewHo
      */
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        if (itemList.isEmpty()) {
+        if (!itemList.isEmpty()) {
 
-        } else {
             holder.title.setText((itemList.get(position)).getTitle());
             holder.value.setText(Integer.toString((itemList.get(position)).getTotalCalorie()));
             holder.amount.setText(Double.toString((itemList.get(position)).getUnitNumber()) + " " + ((DailyDietItem) itemList.get(position)).getUnitName());
@@ -113,7 +112,7 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ViewHo
      * Interface for click events
      */
     public interface OnItemClickListner{
-        public abstract void onItemClick(int position);
+        void onItemClick(int position);
     }
 
     /**

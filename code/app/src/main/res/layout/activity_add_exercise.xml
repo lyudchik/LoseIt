@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="activities.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_add_exercise"

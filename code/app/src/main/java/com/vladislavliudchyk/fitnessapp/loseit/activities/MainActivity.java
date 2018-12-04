@@ -206,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
      * Set content for scrolling list for every food intake
      * @param R_id_header Value of the header part of the meal list
      * @param R_id_footer Value of the footer part of the meal list
-     * @param R_id_item
+     * @param R_id_item Value of the item
      * @param itemList List of items represents information about meals
      * @param totalCalorie Value of the total calories for every food intake
      * @param R_string_item Value of the button
@@ -314,7 +314,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    };
+    }
 
     /**
      * Set all content to main app screen
