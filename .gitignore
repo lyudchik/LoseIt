@@ -11,3 +11,5 @@
 *gradle.properties
 *.pro
 *gradlew
+/code/build
+/code/app/release
