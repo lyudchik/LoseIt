@@ -10,7 +10,7 @@
   
 # <a name = "1"> 1. Introduction </a>
 This document represents the Test Plan developed for the mobile application LoseIt.
-The main aim of testing – verification of the functionality and suitability of the application.
+The main aim of testing â€“ verification of the functionality and suitability of the application.
  # <a name = "2">2. Test Items </a>
 The application LoseIt is created for simplify everyday life of persons who keep track of nutrition: store nutrition data in mobile phone. It uses Nutritionix database for searching most recent meal information via the Internet and local database for giving all functionality without any network connections. 
  #### Quality attributes (ISO 25010):
@@ -70,3 +70,4 @@ This application will be tested manually.
  # <a name = "6">6. Pass / Fail Criteria </a>
 Results of testing are represented in [this document](Test%20results.md)
 # <a name = "7">7. Conclusion </a>
+This test plan allows to test the main functionality of the application. Successful completion of the test plan does not guarantee full operability, allows to believe that the app works correctly.
