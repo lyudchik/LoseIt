@@ -1,12 +1,12 @@
 # Test plan
  ## Content
-1 [Introduction](#1)
-2 [Test Items](#2)
-3 [Risk Issues](#3)
-4 [Features to be tested](#4)
-5 [Test Approach](#5)
-6 [Results](#6)
-7 [Conclusion](#7)
+1 [Introduction](#1)<br>
+2 [Test Items](#2)<br>
+3 [Risk Issues](#3)<br>
+4 [Features to be tested](#4)<br>
+5 [Test Approach](#5)<br>
+6 [Results](#6)<br>
+7 [Conclusion](#7)<br>
   
 # <a name = "1"> 1. Introduction </a>
 This document represents the Test Plan developed for the mobile application LoseIt.
@@ -58,7 +58,7 @@ This use case should be tested on:
 	1. Search for information via the Internet
 	2. Search for information in the local database
 
- It is also important to check correctness of non- functional requirements:
+ It is also important to check correctness of non-functional requirements:
  
  - Usability:
 	All functional elements of the user interface have names describing the action that the element does.
